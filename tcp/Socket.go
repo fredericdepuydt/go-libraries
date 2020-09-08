@@ -26,6 +26,8 @@ func (s *Socket) Listen() string {
 			// handle error
 			fmt.Print(err)
 		}
+		
+		fmt.Println("Connection accepted: " + conn.RemoteAddr().String())
 		go handleConnection(conn)
 	}
 }
