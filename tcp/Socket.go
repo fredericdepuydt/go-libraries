@@ -9,6 +9,11 @@ type Socket struct{
 	port int
 }
 
+func CreateSocket(address string, port int) *Socket {
+	s := Socket{address: address, port: port}
+	return &s
+}
+
 func (s *Socket) Listen() string {
 	ln, err := net.Listen("tcp", ":" + strconv.Itoa(s.port))
 	if err != nil {
