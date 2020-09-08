@@ -8,6 +8,7 @@ package echo
 import "go-libraries/color"
 import "fmt"
 
+// TODO: Implement title function
 // TITLE BLOCK
 func title(title string){
     //width   := 100
@@ -27,9 +28,9 @@ func Section(section string, text string, col string){
         col = color.Cyan
     }
     if section == "" {
-        fmt.Print(col + text + color.Default)
+        fmt.Println(col + text + color.Default)
     } else {
-        fmt.Print(col + section + color.Default +  ": " + text)
+        fmt.Println(col + section + color.Default +  ": " + text)
     }
 }
 
@@ -58,6 +59,7 @@ func Debug(text string){
     Section("DEBUG", text, color.Purple)
 }
 
+// TODO: Implement prompt function
 // PROMPT LINE
 func prompt(variable string){
     //section("PROMPT", variable + " = ", color.green)
